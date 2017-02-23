@@ -312,7 +312,7 @@ class TingyunSpider(scrapy.Spider):
 						except Exception,e:
 								print Exception,":",e
 								raise CloseSpider("can not find the start page number,please check,spider closed!!!")
-						for i in range(int(begin),66):
+						for i in range(int(begin),max_pages+1):
 								i = T_T_P(i,self.name,level)
 								url = urls.format(page=str(i))
 								if C_U_V(url):
