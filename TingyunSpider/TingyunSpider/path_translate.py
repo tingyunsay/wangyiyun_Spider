@@ -52,26 +52,27 @@ def R_2_A(index_url,url_tail,site_name,level,is_sege):
 def U_G(index_url,site_name,level):
 		if level == 0:
 				if site_name == "xiami_album":
-						print re.sub('(?<=r/)\d+',"{page}",index_url),"#################"
-						return re.sub('(?<=r/)\d+',"{page}",index_url)
-				return general_func.Url_Generate(index_url)
+						return re.sub('(?<=r/)\d+',"{page}",index_url),index_url
+
+				return general_func.Url_Generate(index_url),index_url
 		elif level == 1:
 
-				return general_func.Url_Generate(index_url)
+				return general_func.Url_Generate(index_url).index_url
 		elif level == 2:
 				if site_name == "wangyiyun_album":
-						return re.sub("(\d+)$","{page}",index_url+"&offset=0")
-				else:
-						return general_func.Url_Generate(index_url)
+						start_url = index_url+"&offset=0"
+						return re.sub("(\d+)$","{page}",start_url),start_url
+				
+				return general_func.Url_Generate(index_url),index_url
 		elif level == 3:
 	
-				return general_func.Url_Generate(index_url)
+				return general_func.Url_Generate(index_url),index_url
 		elif level == 4:
 	
-				return general_func.Url_Generate(index_url)
+				return general_func.Url_Generate(index_url),index_url
 		elif level == 5:
 	
-				return general_func.Url_Generate(index_url)
+				return general_func.Url_Generate(index_url),index_url
 
 #详情请到general_func中查看
 def G_V_U(urls):

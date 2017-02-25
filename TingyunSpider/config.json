@@ -3,8 +3,8 @@
 				"Splash":0,
 				"Index_Url":{
 						"url":[
-						"http://music.163.com/discover/artist/cat?id=1001&initial=65",
-						"http://music.163.com/discover/artist/cat?id=1002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=1001&initial=65"],
+						"hello":["http://music.163.com/discover/artist/cat?id=1002&initial=65",
 						"http://music.163.com/discover/artist/cat?id=1003&initial=65",
 						"http://music.163.com/discover/artist/cat?id=2001&initial=65",
 						"http://music.163.com/discover/artist/cat?id=2002&initial=65",
