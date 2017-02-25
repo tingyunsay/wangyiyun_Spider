@@ -310,7 +310,7 @@ class TingyunSpider(scrapy.Spider):
 								begin = re.search('\d+$',Index_Url).group()
 						except Exception,e:
 								print Exception,":",e
-						for i in range(int(begin),max_pages+1):
+						for i in range(int(begin),66):
 								i = T_T_P(i,self.name,level)
 								url = urls.format(page=str(i))
 								if C_U_V(url):
@@ -420,7 +420,7 @@ class TingyunSpider(scrapy.Spider):
 								max_pages = T_P_C(self.name,int(max_pages),level)
 						else:
 								raise ValueError("parse_zero: ERROR,in the splashing,can not find the Max_page,please check!!!")
-						urls,start_page = U_G(Index_Url,self.name,level)
+						urls,start_url = U_G(Index_Url,self.name,level)
 				#存在json即用json的方式去解读
 				else:
 						res_json = json.loads(response.body_as_unicode())
@@ -435,7 +435,7 @@ class TingyunSpider(scrapy.Spider):
 								max_pages = T_P_C(self.name,int(res_json),level)
 						else:
 								raise ValueError("parse_zero: ERROR,in the json parse,can not find the Max_page,please check!!!")
-						urls,start_page = U_G(Index_Url,self.name,level)
+						urls,start_url = U_G(Index_Url,self.name,level)
 				#如果该站点压根没有告诉你有多少页面，那就只能手动给出一个值了，如下函数.
 				if not max_pages:
 					max_pages = T_P_B(self.name,level)	
@@ -444,7 +444,7 @@ class TingyunSpider(scrapy.Spider):
 				if First['Max_Page'].has_key('splash'):
 						begin = 0
 						try:
-								begin = re.search('\d+$',start_page).group()
+								begin = re.search('\d+$',start_url).group()
 						except Exception,e:
 								print Exception,":",e
 
@@ -640,13 +640,14 @@ class TingyunSpider(scrapy.Spider):
 						begin = 0
 
 						try:
-								begin = re.search('\d+$',Index_Url).group()
+								begin = re.search('\d+$',start_url).group()
 						except Exception,e:
 								print Exception,":",e
 
 						for i in range(int(begin),max_pages+1):
 								i = T_T_P(i,self.name,level)
 								url = urls.format(page=str(i))
+								print "@@@@@@@@@@@@@",url
 								if C_U_V(url):
 										request = Request(url,callback = self.segement_second,dont_filter=True)
 										request.meta['Some_Info'] = Some_Info
@@ -749,7 +750,7 @@ class TingyunSpider(scrapy.Spider):
 								max_pages = T_P_C(self.name,int(max_pages),level)
 						else:
 								raise ValueError("parse_zero: ERROR,in the splashing,can not find the Max_page,please check!!!")
-						urls,start_page = U_G(Index_Url,self.name,level)
+						urls,start_url = U_G(Index_Url,self.name,level)
 				#存在json即用json的方式去解读
 				else:
 						res_json = json.loads(response.body_as_unicode())
@@ -764,7 +765,7 @@ class TingyunSpider(scrapy.Spider):
 								max_pages = T_P_C(self.name,int(res_json),level)
 						else:
 								raise ValueError("parse_zero: ERROR,in the json parse,can not find the Max_page,please check!!!")
-						urls,start_page = U_G(Index_Url,self.name,level)
+						urls,start_url = U_G(Index_Url,self.name,level)
 				#如果该站点压根没有告诉你有多少页面，那就只能手动给出一个值了，如下函数.
 				if not max_pages:
 					max_pages = T_P_B(self.name,level)	
@@ -773,7 +774,7 @@ class TingyunSpider(scrapy.Spider):
 				if Third['Max_Page'].has_key('splash'):
 						begin = 0
 						try:
-								begin = re.search('\d+$',start_page).group()
+								begin = re.search('\d+$',start_url).group()
 						except Exception,e:
 								print Exception,":",e
 						for i in range(int(begin),max_pages+1):
@@ -800,7 +801,7 @@ class TingyunSpider(scrapy.Spider):
 				else:
 						begin = 0
 						try:
-								begin = re.search('\d+$',Index_Url).group()
+								begin = re.search('\d+$',start_url).group()
 						except Exception,e:
 								print Exception,":",e
 						for i in range(int(begin),max_pages+1):

@@ -1405,7 +1405,6 @@ class TingyunSpider(scrapy.Spider):
 						for url in R_2_A(Index_Url,response.xpath(xpath).extract(),self.name,level,is_sege):
 								detail_url.append(url)
 		#这里是第一层的分页处理函数，如果接受到了下一层级的数据，就继续传递给parse_first(第二层) ; 如果分完页，没有下一层的数据，说明得到的这些页面就是目标页面，直接进到parse_final
-		print detail_url,"###########"
 		if Forth is None:
 				if self.Splash:
 						for url in detail_url:
