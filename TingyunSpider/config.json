@@ -18,8 +18,7 @@
 						"http://music.163.com/discover/artist/cat?id=4001&initial=65",
 						"http://music.163.com/discover/artist/cat?id=4002&initial=65",
 						"http://music.163.com/discover/artist/cat?id=4003&initial=65"
-							]
-						},
+							],
 						"Segement":{
 									"Max_Page":{
 												"xpath":"//ul[@id=\"initial-selector\"]/li[last()-1]/a/@href",
@@ -29,6 +28,7 @@
 														}
 											}
 						}
+					}
 
 				},
 				{
@@ -62,6 +62,59 @@
 								"score_counts":["/"]
 						}
 				}],
+		"wangyiyun_artist":[{
+				"Splash":0,
+				"Index_Url":{
+						"url":[
+						"http://music.163.com/discover/artist/cat?id=1001&initial=65"],
+						"hello":
+						["http://music.163.com/discover/artist/cat?id=1002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=1003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=2001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=2002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=2003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=6001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=6002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=6003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=7001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=7002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=7003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=4001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=4002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=4003&initial=65"
+							],
+						"Segement":{
+									"Max_Page":{
+												"xpath":"//ul[@id=\"initial-selector\"]/li[last()-1]/a/@href",
+												"re":"\\d+$",
+												"segement":{
+														"xpath":["//div[@class=\"u-cover u-cover-5\"]/a/@href","//li[@class=\"sml\"]/a[1]/@href"]
+														}
+											}
+							}
+					}
+				},
+				{
+						"First":{
+								"xpath":["//a[@id=\"artist-home\"]/@href"]
+							}
+				},
+				{
+					"Final_Xpath":{
+								"site_name":["wangyiyun_artist"],
+								"artist_name":["//span[@class=\"tit f-ff2 s-fc0 f-thide\"]/text()"],
+								"update_time":["/"],
+								"fans_counts":["//strong[@id=\"fan_count\"]/text()"],
+								"album_counts":["/"],
+								"song_counts":["/"],
+								"mv_counts":["/"],
+								"dynamic_counts":["//strong[@id=\"event_count\"]/text()"],
+								"comment_counts":["/"],
+								"play_counts":["/"],
+								"style_classify":["/"]
+							}
+				}],
+						
 		"xiami_album":[{
 					"Splash":0,
 					"Index_Url":{
