@@ -111,7 +111,8 @@
 								"dynamic_counts":["//strong[@id=\"event_count\"]/text()"],
 								"comment_counts":["/"],
 								"play_counts":["/"],
-								"style_classify":["/"]
+								"style_classify":["/"],
+								"song_name":["/"]
 							}
 				}],
 						
@@ -205,8 +206,7 @@
 					"Splash":1,
 					"Index_Url":{
 								"url":[
-								"http://www.xiami.com/artist/list/r/1/l/A/page/1"],
-								"hello":[
+								"http://www.xiami.com/artist/list/r/1/l/A/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/B/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/C/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/D/page/1",
@@ -274,8 +274,7 @@
 					"Splash":0,
 					"Index_Url":{
 								"url":[
-								"http://www.xiami.com/artist/list/r/1/l/A/page/1"],
-								"hello":[
+								"http://www.xiami.com/artist/list/r/1/l/A/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/B/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/C/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/D/page/1",
@@ -360,6 +359,54 @@
 								"fans_counts":["/"],
 								"charge_counts":["/"],
 								"barrage_counts":["/"]
+						}
+				}],
+		"douban_artist":[{
+					"Splash":0,
+					"Index_Url":{
+								"url":[
+								"https://music.douban.com/artists/genre_page/1/1"],
+								"hello":[
+								"https://music.douban.com/artists/genre_page/2/1",
+								"https://music.douban.com/artists/genre_page/3/1",
+								"https://music.douban.com/artists/genre_page/4/1",
+								"https://music.douban.com/artists/genre_page/5/1",
+								"https://music.douban.com/artists/genre_page/6/1",
+								"https://music.douban.com/artists/genre_page/7/1",
+								"https://music.douban.com/artists/genre_page/8/1",
+								"https://music.douban.com/artists/genre_page/9/1",
+								"https://music.douban.com/artists/genre_page/10/1",
+								"https://music.douban.com/artists/genre_page/11/1"
+								],
+								"Segement":{
+										"Max_Page":{
+												"xpath":"//div[@class=\"paginator\"]/span[@class=\"thispage\"]/@data-total-page",
+												"re":"\\d+",
+												"segement":{
+														"xpath":["//div[@class=\"photoin\"]/div[@class=\"ll\"]/a/@href"]	
+													}
+											}	
+									}
+							}
+				},
+				{
+						"Final_Xpath":{
+								"site_name":["xiami_artist"],
+								"artist_name":["//div[@id=\"sp-user-card\"]/div[@class=\"bd\"]/span[@class=\"pl\"][1]/following-sibling::*[1]/text()"],
+								"update_time":["/"],
+								"fans_counts":["//div[@id=\"db-followers\"]/div/h2/span[@class=\"pl\"]/a/text()"],
+								"album_counts":["/"],
+								"song_counts":["/"],
+								"mv_counts":["/"],
+								"dynamic_counts":["/"],
+								"comment_counts":["//div[@class=\"main\"]/div[@class=\"mod\"]/div[@class=\"hd\"]/h2/span[@class=\"pl\"]/a/text()"],
+								"style_classify":["//div[@id=\"sp-user-card\"]/div[@class=\"bd\"]/span[@class=\"pl\"][2]/following-sibling::a/text()"],
+								"publish_company":["//div[@class=\"site-info\"]/div/div[@class=\"bd\"]/text()"],
+								"All_Xpath":{
+									"all_xpath":["//tr[@song_id]"],
+									"song_name":["td[@class=\"title player-playable\"]/text()"],
+									"play_counts":["td[@class=\"title player-playable\"]/following-sibling::*[1]/text()"]
+									}
 						}
 				}]
 
