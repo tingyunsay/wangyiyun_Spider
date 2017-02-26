@@ -60,12 +60,15 @@ def U_G(index_url,site_name,level):
 				return general_func.Url_Generate(index_url),index_url
 		elif level == 2:
 				if site_name == "wangyiyun_album":
-						start_url = index_url+"&offset=0"
-						return re.sub("(\d+)$","{page}",start_url),start_url
+						index_url = index_url+"&offset=0"
+						return re.sub("(\d+)$","{page}",index_url),index_url
 				
 				return general_func.Url_Generate(index_url),index_url
 		elif level == 3:
-	
+				if site_name == "xiami_mv":
+						index_url = index_url + "?type=all&page=1"
+						return general_func.Url_Generate(index_url),index_url
+
 				return general_func.Url_Generate(index_url),index_url
 		elif level == 4:
 	

@@ -53,6 +53,7 @@
 								"album_name":["//h2[@class=\"f-ff2\"]/text()"],
 								"share_counts":["//a[@data-res-action=\"share\"]/i/text()"],
 								"comment_counts":["//span[@id=\"cnt_comment_count\"]/text()"],
+								"album_counts":["/"],
 								"artist_name":["//p[@class=\"intr\"]/span/@title"],
 								"publish_time":["//p[@class=\"intr\"][2]/text()"],
 								"publish_company":["//p[@class=\"intr\"][3]/text()"],
@@ -268,8 +269,99 @@
 								"style_classify":["//div[@id=\"artist_tags_block\"]/div[@class=\"content clearfix\"]/a/text()"],
 								"song_name":["/"]
 						}
+				}],
+		"xiami_mv":[{
+					"Splash":0,
+					"Index_Url":{
+								"url":[
+								"http://www.xiami.com/artist/list/r/1/l/A/page/1"],
+								"hello":[
+								"http://www.xiami.com/artist/list/r/1/l/B/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/C/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/D/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/E/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/F/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/G/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/H/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/I/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/J/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/K/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/L/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/M/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/N/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/O/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/P/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Q/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/R/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/S/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/T/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/U/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/V/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/W/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/X/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Y/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Z/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/0/page/1"
+								],
+								"Segement":{
+										"Max_Page":{
+												"xpath":"//dl[@class=\"in_lan\"]/dd[last()]/a/@href",
+												"re":"\\d+"
+											}	
+									}
+							}
+				},
+				{
+						"First":{
+								"Max_Page":{
+										"xpath":"//div[@class=\"all_page\"]/span/text()",
+										"re":"[0-9]+(?=[^0-9]*$)",
+										"segement":{
+												"xpath":["//div[@class=\"artistBlock_list\"]/ul/li/div/p[1]/a/@href"]
+										}
+								}
+						}
+				},
+				{
+						"Second":{
+								"xpath":["//div[@id=\"content\"]/div[@id=\"nav\"]/a[5]/@href","//div[@id=\"glory-nav\"]/a[6]/@href"]		
+						}
+				},
+				{
+						"Third":{
+								"Max_Page":{
+										"xpath":"//p[@class=\"counts\"]/text()",
+										"re":"\\d+",
+										"segement":{
+												"xpath":["//div[@class=\"mv_item100_block\"]/p[@class=\"name\"]/a/@href"]		
+										}
+								}		
+						}		
+				},
+				{
+						"Final_Xpath":{
+								"site_name":["xiami_mv"],
+								"artist_name":["//div[@class=\"section\"]/div/div[@id=\"title\"]/p/a/@title"],
+								"update_time":["/"],
+								"mv_name":["//div[@class=\"section\"]/div/div[@id=\"title\"]/h1/text()"],
+								"play_counts":["//div[@id=\"statistics\"]/ul/li[@class=\"play\"]/em/text()"],
+								"collect_counts":["//div[@id=\"statistics\"]/ul/li[@class=\"fav\"]/em/text()"],
+								"fav_counts":["/"],
+								"download_counts":["/"],
+								"publish_time":["/"],
+								"comment_counts":["//div[@id=\"statistics\"]/ul/li[@class=\"common\"]/em/text()"],
+								"mv_id":["/"],
+								"style_classify":["/"],
+								"reward_counts":["/"],
+								"introduce":["//div[@class=\"content\"]/p/text()"],
+								"publish_name":["/"],
+								"publish_id":["/"],
+								"sub_counts":["/"],
+								"fans_counts":["/"],
+								"charge_counts":["/"],
+								"barrage_counts":["/"]
+						}
 				}]
-
 
 
 }

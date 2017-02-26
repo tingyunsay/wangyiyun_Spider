@@ -22,7 +22,9 @@ def T_P_C(site_name,max_pages,level):
 		elif level == 3:
 				if site_name == "xiami_album":
 						return general_func.Total_page_circulate(max_pages,9)
-				
+				if site_name == "xiami_mv":
+						return general_func.Total_page_circulate(max_pages,20)
+
 				return general_func.Total_page_circulate(max_pages,1)
 		elif level == 4:
 				
