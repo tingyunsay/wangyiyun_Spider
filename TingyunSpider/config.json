@@ -66,9 +66,8 @@
 				"Splash":0,
 				"Index_Url":{
 						"url":[
-						"http://music.163.com/discover/artist/cat?id=1001&initial=65"],
-						"hello":
-						["http://music.163.com/discover/artist/cat?id=1002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=1001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=1002&initial=65",
 						"http://music.163.com/discover/artist/cat?id=1003&initial=65",
 						"http://music.163.com/discover/artist/cat?id=2001&initial=65",
 						"http://music.163.com/discover/artist/cat?id=2002&initial=65",
@@ -199,6 +198,75 @@
 								"fav_counts":["//div[@id=\"album_info\"]/ul/li[1]/text()"],
 								"score_level":["//div[@id=\"album_info\"]/div[@id=\"album_rank\"]/p/em/text()"],
 								"score_counts":["//div[@id=\"album_info\"]/div[@id=\"album_rank\"]/p/i/text()"]
+						}
+				}],
+		"xiami_artist":[{
+					"Splash":1,
+					"Index_Url":{
+								"url":[
+								"http://www.xiami.com/artist/list/r/1/l/A/page/1"],
+								"hello":[
+								"http://www.xiami.com/artist/list/r/1/l/B/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/C/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/D/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/E/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/F/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/G/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/H/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/I/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/J/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/K/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/L/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/M/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/N/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/O/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/P/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Q/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/R/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/S/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/T/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/U/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/V/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/W/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/X/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Y/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Z/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/0/page/1"
+								],
+								"Segement":{
+										"Max_Page":{
+												"xpath":"//dl[@class=\"in_lan\"]/dd[last()]/a/@href",
+												"re":"\\d+"
+											}	
+									}
+							}
+				},
+				{
+						"First":{
+								"Max_Page":{
+										"xpath":"//div[@class=\"all_page\"]/span/text()",
+										"re":"[0-9]+(?=[^0-9]*$)",
+										"segement":{
+												"xpath":["//div[@class=\"artistBlock_list\"]/ul/li/div/p[1]/a/@href"],
+												"splash":1
+										}
+								}
+						}
+				},
+				{
+						"Final_Xpath":{
+								"site_name":["xiami_artist"],
+								"artist_name":["//div[@id=\"title\"]/h1/text()","//div[@class=\"clearfix\"]/h1/text()"],
+								"update_time":["/"],
+								"fans_counts":["//div[@class=\"music_counts\"]/ul[@class=\"clearfix\"]/li[2]/a/text()"],
+								"album_counts":["/"],
+								"song_counts":["/"],
+								"mv_counts":["/"],
+								"dynamic":["/"],
+								"comment_counts":["//div[@class=\"music_counts\"]/ul[@class=\"clearfix\"]/li[3]/a/text()"],
+								"play_counts":["//em[@id=\"play_count_num\"]/text()"],
+								"style_classify":["//div[@id=\"artist_tags_block\"]/div[@class=\"content clearfix\"]/a/text()"],
+								"song_name":["/"]
 						}
 				}]
 
