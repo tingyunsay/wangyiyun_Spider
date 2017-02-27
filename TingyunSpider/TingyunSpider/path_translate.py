@@ -68,6 +68,9 @@ def U_G(index_url,site_name,level):
 				if site_name == "xiami_mv":
 						index_url = index_url + "?type=all&page=1"
 						return general_func.Url_Generate(index_url),index_url
+				if site_name == "xiami_music":
+						index_url = index_url + "?page=1"
+						return general_func.Url_Generate(index_url),index_url
 
 				return general_func.Url_Generate(index_url),index_url
 		elif level == 4:

@@ -14,6 +14,8 @@ def T_P_C(site_name,max_pages,level):
 		elif level == 1:
 				if site_name == "xiami_album":
 						return general_func.Total_page_circulate(max_pages,30)
+				if site_name == "xiami_music":
+						return general_func.Total_page_circulate(max_pages,30)
 				
 				return general_func.Total_page_circulate(max_pages,1)
 		elif level == 2:
@@ -23,6 +25,8 @@ def T_P_C(site_name,max_pages,level):
 				if site_name == "xiami_album":
 						return general_func.Total_page_circulate(max_pages,9)
 				if site_name == "xiami_mv":
+						return general_func.Total_page_circulate(max_pages,20)
+				if site_name == "xiami_music":
 						return general_func.Total_page_circulate(max_pages,20)
 
 				return general_func.Total_page_circulate(max_pages,1)
@@ -47,7 +51,9 @@ def T_P_B(site_name,level):
 				
 				raise ValueError("level2 没有最大页数，请手动指定一个值!!!")
 		elif level == 3:
-				
+				if site_name == "xiami_music":
+						return 1
+
 				raise ValueError("level3 没有最大页数，请手动指定一个值!!!")
 		elif level == 4:
 				

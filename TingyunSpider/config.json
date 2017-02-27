@@ -115,6 +115,60 @@
 								"song_name":["/"]
 							}
 				}],
+		"wangyiyun_music":[{
+				"Splash":0,
+				"Index_Url":{
+						"url":[
+						"http://music.163.com/discover/artist/cat?id=1001&initial=65"],
+						"hello":[
+						"http://music.163.com/discover/artist/cat?id=1002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=1003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=2001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=2002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=2003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=6001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=6002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=6003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=7001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=7002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=7003&initial=65",
+						"http://music.163.com/discover/artist/cat?id=4001&initial=65",
+						"http://music.163.com/discover/artist/cat?id=4002&initial=65",
+						"http://music.163.com/discover/artist/cat?id=4003&initial=65"
+							],
+						"Segement":{
+									"Max_Page":{
+												"xpath":"//ul[@id=\"initial-selector\"]/li[last()-1]/a/@href",
+												"re":"\\d+$",
+												"segement":{
+														"xpath":["//div[@class=\"u-cover u-cover-5\"]/a/@href","//li[@class=\"sml\"]/a[1]/@href"]
+														}
+											}
+						}
+					}
+
+				},
+				{
+						"First":{
+									"xpath":["//ul[@class=\"f-hide\"]/li/a/@href"]
+							}
+				},
+				{
+					"Final_Xpath":{
+								"site_name":["wangyiyun_music"],
+								"artist_name":["//p[@class=\"des s-fc4\"]/span/a[@class=\"s-fc7\"]/text()"],
+								"update_time":["/"],
+								"fans_counts":["/"],
+								"album_counts":["/"],
+								"song_counts":["/"],
+								"mv_counts":["/"],
+								"dynamic_counts":["/"],
+								"comment_counts":["/"],
+								"play_counts":["/"],
+								"style_classify":["/"],
+								"song_name":["//em[@class=\"f-ff2\"]/text()"]
+						}
+				}],
 						
 		"xiami_album":[{
 					"Splash":0,
@@ -359,6 +413,92 @@
 								"fans_counts":["/"],
 								"charge_counts":["/"],
 								"barrage_counts":["/"]
+						}
+				}],
+		"xiami_music":[{
+					"Splash":1,
+					"Index_Url":{
+								"url":[
+								"http://www.xiami.com/artist/list/r/1/l/A/page/1"],
+								"hello":[
+								"http://www.xiami.com/artist/list/r/1/l/B/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/C/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/D/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/E/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/F/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/G/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/H/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/I/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/J/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/K/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/L/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/M/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/N/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/O/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/P/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Q/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/R/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/S/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/T/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/U/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/V/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/W/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/X/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Y/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/Z/page/1",
+								"http://www.xiami.com/artist/list/r/1/l/0/page/1"
+								],
+								"Segement":{
+										"Max_Page":{
+												"xpath":"//dl[@class=\"in_lan\"]/dd[last()]/a/@href",
+												"re":"\\d+"
+											}	
+									}
+							}
+				},
+				{
+						"First":{
+								"Max_Page":{
+										"xpath":"//div[@class=\"all_page\"]/span/text()",
+										"re":"[0-9]+(?=[^0-9]*$)",
+										"segement":{
+												"xpath":["//div[@class=\"artistBlock_list\"]/ul/li/div/p[1]/a/@href"],
+												"splash":1
+										}
+								}
+						}
+				},
+				{
+						"Second":{
+								"xpath":["//div[@id=\"content\"]/div[@id=\"nav\"]/a[4]/@href","//div[@id=\"glory-nav\"]/a[5]/@href"]
+						}
+				},
+				{
+						"Third":{
+								"Max_Page":{
+										"xpath":"//div[@class=\"all_page\"]/span/text()",
+										"re":"[0-9]+(?=[^0-9]*$)",
+										"segement":{
+												"xpath":["//table[@class=\"track_list\"]/tbody/tr/td[@class=\"song_name\"]/a[1]/@href"]
+										}
+								}	
+									
+						}		
+				},
+				{
+						"Final_Xpath":{
+								"site_name":["xiami_music"],
+								"artist_name":["//table[@id=\"albums_info\"]/tr[2]/td[2]/div/a/text()","//div[@class=\"clearfix\"]/h1/text()"],
+								"update_time":["/"],
+								"fans_counts":["//div[@class=\"music_counts\"]/ul[@class=\"clearfix\"]/li[2]/a/text()"],
+								"album_counts":["/"],
+								"song_counts":["/"],
+								"mv_counts":["/"],
+								"dynamic_counts":["/"],
+								"comment_counts":["//div[@class=\"music_counts\"]/ul[@class=\"clearfix\"]/li[3]/a/text()"],
+								"play_counts":["//em[@id=\"play_count_num\"]/text()"],
+								"style_classify":["//div[@class=\"content clearfix\"]/a/text()"],
+								"song_name":["//div[@id=\"title\"]/h1/text()"]
 						}
 				}],
 		"douban_artist":[{
