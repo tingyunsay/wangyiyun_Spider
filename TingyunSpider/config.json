@@ -119,8 +119,7 @@
 				"Splash":0,
 				"Index_Url":{
 						"url":[
-						"http://music.163.com/discover/artist/cat?id=1001&initial=65"],
-						"hello":[
+						"http://music.163.com/discover/artist/cat?id=1001&initial=65",
 						"http://music.163.com/discover/artist/cat?id=1002&initial=65",
 						"http://music.163.com/discover/artist/cat?id=1003&initial=65",
 						"http://music.163.com/discover/artist/cat?id=2001&initial=65",
@@ -419,8 +418,7 @@
 					"Splash":1,
 					"Index_Url":{
 								"url":[
-								"http://www.xiami.com/artist/list/r/1/l/A/page/1"],
-								"hello":[
+								"http://www.xiami.com/artist/list/r/1/l/A/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/B/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/C/page/1",
 								"http://www.xiami.com/artist/list/r/1/l/D/page/1",
@@ -505,8 +503,7 @@
 					"Splash":0,
 					"Index_Url":{
 								"url":[
-								"https://music.douban.com/artists/genre_page/6/1"],
-								"hello":[
+								"https://music.douban.com/artists/genre_page/1/1",
 								"https://music.douban.com/artists/genre_page/2/1",
 								"https://music.douban.com/artists/genre_page/3/1",
 								"https://music.douban.com/artists/genre_page/4/1",
@@ -552,8 +549,7 @@
 					"Splash":0,
 					"Index_Url":{
 								"url":[
-								"https://music.douban.com/artists/genre_page/6/1"],
-								"hello":[
+								"https://music.douban.com/artists/genre_page/1/1",
 								"https://music.douban.com/artists/genre_page/2/1",
 								"https://music.douban.com/artists/genre_page/3/1",
 								"https://music.douban.com/artists/genre_page/4/1",
