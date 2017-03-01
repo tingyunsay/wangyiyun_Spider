@@ -29,7 +29,7 @@ from TingyunSpider.total_page_circulate import T_P_C,T_T_P,T_P_B
 
 
 class TingyunSpider(scrapy.Spider):
-	name ='douban_music'
+	name ='douban_artist'
 	allowed_domain = []
 		
 	def __init__(self,*args,**kwargs):
