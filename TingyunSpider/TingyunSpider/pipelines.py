@@ -20,8 +20,26 @@ import MySQLdb.cursors
 
 class TingyunspiderPipeline(object):
 	def __init__(self):
-		self.file = codecs.open('current_data.json','wb',encoding="utf-8")
-	def process_item(self, item, spider):
-		line = json.dumps(dict(item),ensure_ascii=False)+"\n"
-		self.file.write(line)
+		self.num_music = 0
+		self.num_artist = 0
+		self.artist = ""
+		self.music = ""
 
+	def process_item(self, item, spider):
+		if re.search('artist',''.join(item['site_name'])):
+				while self.num_artist < 100:
+						self.artist += json.dumps(dict(item),ensure_ascii=False)+"\n"
+						self.num_artist += 1
+				f = codecs.open('all_artist.json','a',encoding="utf-8")
+				f.write(self.artist)
+				f.close()
+				self.artist = ""
+				self.num_artist = 0
+		if re.search('music',''.join(item['site_name'])):
+				while self.num_music < 100:
+						self.music += json.dumps(dict(item),ensure_ascii=False)+"\n"
+						self.num_music += 1
+				self.music = ""
+				self.num_music = 0
+				self.file = codecs.open('all_music.json','a',encoding="utf-8")
+				self.file.write(self.artist)
