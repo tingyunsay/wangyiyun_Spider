@@ -18,28 +18,49 @@ from twisted.enterprise import adbapi
 import MySQLdb.cursors
 
 
+class Count(object):
+	def __init__(self):
+		self.line = ""
+		self.count = 0
+		self.flag = 0
+
+
 class TingyunspiderPipeline(object):
 	def __init__(self):
-		self.num_music = 0
-		self.num_artist = 0
-		self.artist = ""
-		self.music = ""
+		self.Concert = Count()
+		self.Mv = Count()
+		self.Artist = Count()
+		self.Album = Count()
+		self.Music = Count()
+		self.Nettv = Count()
+		self.Nettv_sp = Count()
+		self.Movie = Count()
+		self.Tv = Count()
+		
 
 	def process_item(self, item, spider):
 		if re.search('artist',''.join(item['site_name'])):
-				while self.num_artist < 100:
-						self.artist += json.dumps(dict(item),ensure_ascii=False)+"\n"
-						self.num_artist += 1
-				f = codecs.open('all_artist.json','a',encoding="utf-8")
-				f.write(self.artist)
-				f.close()
-				self.artist = ""
-				self.num_artist = 0
+				if self.Artist.count < 50:
+						self.Artist.line += json.dumps(dict(item),ensure_ascii=False)+"\n"
+						self.Artist.count += 1
+				else:
+						f = codecs.open('all_artist.json','a',encoding="utf-8")
+						f.write(self.Artist.line)
+						f.close()
+						self.Artist.line = ""
+						self.Artist.count = 0
 		if re.search('music',''.join(item['site_name'])):
-				while self.num_music < 100:
-						self.music += json.dumps(dict(item),ensure_ascii=False)+"\n"
-						self.num_music += 1
-				self.music = ""
-				self.num_music = 0
-				self.file = codecs.open('all_music.json','a',encoding="utf-8")
-				self.file.write(self.artist)
+				if self.Music.count < 50:
+						self.Music.line += json.dumps(dict(item),ensure_ascii=False)+"\n"
+						self.Music.count += 1
+				else:
+						f = codecs.open('all_music.json','a',encoding="utf-8")
+						f.write(self.Music.line)
+						f.close()
+						self.Music.line = ""
+						self.Music.count = 0
+				
+
+
+
+
